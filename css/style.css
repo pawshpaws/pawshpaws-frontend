@@ -1,124 +1,130 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #f7f2ea;
+  --maroon: #7b1a34;
+  --gold: #b8962e;
 }
 
-body {
-    line-height: 1.6;
-    color: #333;
+html, body {
+  height: 100%;
+  background: var(--cream);
+  font-family: 'Jost', sans-serif;
+  color: var(--maroon);
+  overflow-x: hidden;
 }
 
-/* ================= HEADER ================= */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #000;
+/* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  padding: 22px 52px;
 }
 
-.logo img {
-    height: 60px;
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 15px;
+.logo-img {
+  height: 80px;
+  width: auto;
 }
 
-nav a:hover {
-    opacity: 0.7;
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 64px;
+  margin-left: auto;
 }
 
-/* ================= HERO ================= */
+.nav-links a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--maroon);
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
 
+.nav-links a:hover { opacity: 1; }
+
+/* ── HERO ── */
 .hero {
-    background: #f4f4f4;
-    text-align: center;
-    padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 124px);
+  padding: 0 52px;
+  gap: 40px;
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 40px;
+  animation: fadeUp 0.9s ease both;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.btn {
-    background: #000;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    display: inline-block;
+.hero-left h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--maroon);
+  text-align: center;
 }
 
-.btn:hover {
-    opacity: 0.8;
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  animation: fadeIn 1.1s ease 0.2s both;
 }
 
-/* ================= SECTIONS ================= */
-
-.section {
-    padding: 80px 10%;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-.section h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
+.hero-image-wrap {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3.6;
 }
 
-.light {
-    background: #f9f9f9;
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
-/* ================= FORM ================= */
-
-.inquiry-form {
-    max-width: 600px;
-    margin-top: 30px;
-}
-
-.inquiry-form input,
-.inquiry-form textarea {
-    margin-bottom: 15px;
-    padding: 12px;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid #ddd;
-}
-
-.inquiry-form textarea {
-    min-height: 120px;
-}
-
-.inquiry-form button {
-    background: #000;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-.inquiry-form button:hover {
-    opacity: 0.8;
-}
-
-/* ================= FOOTER ================= */
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #fff;
-    margin-top: 50px;
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .nav-links { gap: 24px; }
+  .hero {
+    flex-direction: column;
+    padding: 40px 24px;
+    min-height: unset;
+    gap: 48px;
+  }
+  .hero-left { padding-right: 0; }
+  .hero-right { justify-content: center; width: 100%; }
+  .hero-image-wrap { max-width: 100%; }
 }
