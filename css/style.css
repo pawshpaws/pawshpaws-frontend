@@ -5,48 +5,95 @@ box-sizing:border-box;
 }
 
 body{
-background:#ebe6e1;
-font-family: 'Georgia', serif;
+background:#f4efea;
+font-family:'Poppins', sans-serif;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
+.navbar{
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 padding:30px 80px;
 }
 
 .logo img{
-width:120px;
+width:130px;
 }
 
-nav a{
-margin:0 30px;
+.menu{
+display:flex;
+align-items:center;
+gap:60px;
+}
+
+.menu a{
 text-decoration:none;
-color:#7b2e3d;
-font-size:18px;
+color:#7a3a45;
+font-size:17px;
 font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#a05b66;
+}
+
+/* BUY BUTTON */
+
+.buy-btn{
+background:#7a3a45;
+color:white;
+padding:10px 22px;
+border-radius:30px;
 }
 
 /* HERO SECTION */
 
 .hero{
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:60px 100px;
+justify-content:space-between;
+padding:80px 100px;
 }
 
-.hero-text h1{
-font-size:70px;
-color:#6b1f2b;
+.hero-left{
+max-width:520px;
+}
+
+.hero-left h1{
+font-family:'Playfair Display', serif;
+font-size:72px;
+color:#6a1d2c;
 line-height:1.1;
-max-width:500px;
+margin-bottom:25px;
 }
 
-.hero-image img{
-width:500px;
-border-radius:20px;
+.hero-left p{
+color:#555;
+font-size:18px;
+margin-bottom:30px;
+}
+
+.shop-btn{
+background:#6a1d2c;
+color:white;
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.shop-btn:hover{
+background:#8b3242;
+}
+
+/* HERO IMAGE */
+
+.hero-right img{
+width:520px;
+border-radius:18px;
+box-shadow:0px 10px 30px rgba(0,0,0,0.15);
 }
