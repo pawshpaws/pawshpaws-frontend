@@ -1,99 +1,124 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-background:#f4efea;
-font-family:'Poppins', sans-serif;
+body {
+    line-height: 1.6;
+    color: #333;
 }
 
-/* NAVBAR */
+/* ================= HEADER ================= */
 
-.navbar{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:30px 80px;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #000;
 }
 
-.logo img{
-width:130px;
+.logo img {
+    height: 60px;
 }
 
-.menu{
-display:flex;
-align-items:center;
-gap:60px;
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-.menu a{
-text-decoration:none;
-color:#7a3a45;
-font-size:17px;
-font-weight:500;
-transition:.3s;
+nav a:hover {
+    opacity: 0.7;
 }
 
-.menu a:hover{
-color:#a05b66;
+/* ================= HERO ================= */
+
+.hero {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 100px 20px;
 }
 
-/* BUY BUTTON */
-
-.buy-btn{
-background:#7a3a45;
-color:white;
-padding:10px 22px;
-border-radius:30px;
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-/* HERO SECTION */
-
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 100px;
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.hero-left{
-max-width:520px;
+.btn {
+    background: #000;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.hero-left h1{
-font-family:'Playfair Display', serif;
-font-size:72px;
-color:#6a1d2c;
-line-height:1.1;
-margin-bottom:25px;
+.btn:hover {
+    opacity: 0.8;
 }
 
-.hero-left p{
-color:#555;
-font-size:18px;
-margin-bottom:30px;
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 80px 10%;
 }
 
-.shop-btn{
-background:#6a1d2c;
-color:white;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
 }
 
-.shop-btn:hover{
-background:#8b3242;
+.light {
+    background: #f9f9f9;
 }
 
-/* HERO IMAGE */
+/* ================= FORM ================= */
 
-.hero-right img{
-width:520px;
-border-radius:18px;
-box-shadow:0px 10px 30px rgba(0,0,0,0.15);
+.inquiry-form {
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.inquiry-form textarea {
+    min-height: 120px;
+}
+
+.inquiry-form button {
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.inquiry-form button:hover {
+    opacity: 0.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    margin-top: 50px;
 }
